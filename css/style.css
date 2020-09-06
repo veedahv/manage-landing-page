@@ -1,0 +1,174 @@
+:root {
+    --bright-red: hsl(12, 88%, 59%);
+    --dark-blue: hsl(228, 39%, 23%);
+    --dark-grayish-blue: hsl(227, 12%, 61%);
+    --very-dark-blue: hsl(233, 12%, 13%);
+    --very-pale-red: hsl(13, 100%, 96%);
+    --very-light-gray: hsl(0, 0%, 98%);  
+    --main-white: #ffffff;  
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(../images/bg-simplify-section-mobile.svg);
+    background-size: cover;
+    text-align: center;
+}
+
+nav {
+}
+
+nav,
+section,
+footer {    
+    padding: 10px 20px;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.nav-links,
+.close,
+nav .btn {
+    display: none;
+}
+
+.title {
+    color: var(--very-dark-blue);
+}
+
+button {
+    background-color: var(--bright-red);
+    color: var(--main-white);
+    border-radius: 20px;
+    padding: 10px 20px;
+}
+
+button,
+input {
+    outline: none;
+    border: none;
+}
+
+.home-page {
+    flex-direction: column;
+}
+
+.about {
+    flex-direction: column;
+}
+
+.about-content{
+}
+
+.intro-image-div {
+    width: 100%;
+}
+
+.intro-image {
+    width: 100%;
+}
+
+.reviews {}
+
+.simplify {
+    background-color: var(--bright-red);
+    color: var(--main-white);
+    flex-direction: column;
+}
+
+.simplify button {
+    color: var(--bright-red);
+    background-color: var(--main-white);
+}
+
+footer {
+    background-color: var(--very-dark-blue);
+    color: var(--main-white);
+}
+
+footer a {
+    color: var(--main-white);
+}
+
+input {
+    border-radius: 50px;
+    background-color: var(--main-white);
+    padding: 10px 20px;
+}
+
+@media only screen and (min-width: 1000px){
+
+    body {
+        background-image: url(../images/bg-simplify-section-desktop.svg);
+        text-align: center;
+    }
+    
+    nav,
+    section,
+    footer {    
+        padding: 10px 20px;
+    }
+    
+    .hamburger,
+    .close {
+        display: none;
+    }
+
+    .nav-links {
+        display: block;
+    }
+
+    .nav-links ul {
+        display: flex;
+    }
+
+    .nav-links a {
+        color: var(--very-dark-blue);
+    }
+    
+    .home-page {
+        flex-direction: row-reverse;
+    }
+    
+    .about {
+        flex-direction: row;
+    }
+    
+    .intro-image-div {
+        width: 100%;
+    }
+    
+    .intro-image {
+        width: 100%;
+    }
+    
+    .reviews {}
+    
+    .simplify {
+        flex-direction: row;
+    }
+    
+    footer {
+    }
+    
+    input {
+        padding: 10px 20px;
+    }
+
+}
