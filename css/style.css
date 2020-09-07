@@ -15,10 +15,11 @@
 }
 
 body {
-    background: url(../images/bg-simplify-section-mobile.svg) no-repeat initial, url(../images/bg-tablet-pattern.svg) no-repeat top right;
-    background-size: auto, 100px 100px;
+    background: url(../images/bg-simplify-section-mobile.svg) no-repeat;
+    background-size: cover;
     text-align: center;
     font-size: 16px;
+    font-family: 'Be Vietnam', sans-serif;
 }
 
 nav {
@@ -123,12 +124,12 @@ input {
 }
 
 .about-content-div {
-    margin-bottom: 40px;
+    margin-bottom: 25px;
 }
 
 .number-div-contain {
     padding: 10px 10px 10px 63px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     font-size: 13px;
     font-weight: bold;
     background-color: var(--very-pale-red);
@@ -217,11 +218,18 @@ input {
 
 .simplify img {
     position: absolute;
-    opacity: 0.9;
+    opacity: 0.1;
+    width: 360px;
+    height: 360px;
+}
+
+.tablet-left {
     top: 10px;
     left: -260px;
-    width: 300px;
-    height: 300px;
+}
+
+.tablet-right {
+    display: none;
 }
 
 .simplify button {
@@ -282,14 +290,154 @@ input {
     padding: 10px 17px;
 }
 
+.footer-ul {
+    width: 250px;
+    margin: auto;
+}
+
 .copyright {
     margin-top: 10px;
 }
 
-@media only screen and (min-width: 1000px){
+@media only screen and (min-width: 500px){
 
     body {
-        background-image: url(../images/bg-simplify-section-desktop.svg) no-repeat, url(../images/bg-tablet-pattern.svg) repeat-y top right;
+        text-align: left;
+    }
+    
+    nav,
+    section,
+    footer {    
+        padding: 40px 40px;
+    }
+    
+    .hamburger,
+    .close {
+        display: none;
+    }
+
+    .nav-links,
+    nav .btn {
+        display: block;
+    }
+
+    .nav-links ul {
+        display: flex;
+    }
+
+    .nav-links a {
+        color: var(--very-dark-blue);
+        padding-left: 10px;
+    }
+    
+    .home-page {
+        flex-direction: row-reverse;
+    }
+
+    .home-page-note {
+        width: 70%;
+        padding-right: 50px;
+    }
+
+    .home-page-note h1 {
+        font-size: 35px;
+        margin-bottom: 30px;
+    }
+
+    .home-page-note p {
+        width: 300px;
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+    
+    .about {
+        flex-direction: row;
+    }
+
+    .about-content-head {
+        padding-right: 50px;
+    }
+
+    .about-content-head p {
+        padding-right: 50px;
+    }
+
+    .number-div-contain {
+        background-color: transparent;
+    }
+
+    .number-div-contain,
+    .number-div-p {
+        padding: 10px 10px 10px 85px;
+    }
+    
+    .intro-image-div {
+        width: 100%;
+        height: 400px;
+    }
+    
+    .intro-image {
+        width: 100%;
+        height: 90%;
+    }
+    
+    .reviews {
+        text-align: center;
+    }
+    
+    .simplify {
+        flex-direction: row;
+        padding: 40px 40px;
+    }
+
+    .simplify .btn {
+        margin-top: 0;
+    }
+
+    .tablet-left {
+        top: -10px;
+        left: 60px;
+    }
+    
+    .tablet-right {
+        display: block;
+        bottom: 60px;
+        right: -200px;
+    }
+
+    footer {
+        text-align: center;
+    }
+    
+    .footer {
+        flex-direction: column;
+    }
+    
+    input {
+        padding: 10px 20px;
+    }
+
+    .logo-flex {
+        flex-direction: column;
+    }
+
+    .simplify h2 {
+        font-size: 30px;
+        width: 320px;
+    }
+
+    .footer-form {
+        margin-top: 0px;
+        margin-bottom: 25px;
+        width: 100%;
+    }
+
+}
+
+@media only screen and (min-width: 1025px){
+
+    body {
+        background: url(../images/bg-simplify-section-desktop.svg) no-repeat;
         text-align: left;
     }
     
@@ -324,7 +472,7 @@ input {
 
     .home-page-note {
         width: 70%;
-        padding-right: 150px;
+        padding-right: 100px;
     }
 
     .home-page-note h1 {
@@ -344,6 +492,10 @@ input {
 
     .about-content-head {
         padding-right: 200px;
+    }
+
+    .about-content-head p {
+        padding-right: 100px;
     }
 
     .number-div-contain {
@@ -376,6 +528,17 @@ input {
 
     .simplify .btn {
         margin-top: 0;
+    }
+
+    .tablet-left {
+        top: -10px;
+        left: 150px;
+    }
+    
+    .tablet-right {
+        display: block;
+        bottom: 80px;
+        right: -200px;
     }
     
     .footer {
