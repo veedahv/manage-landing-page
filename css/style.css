@@ -15,9 +15,10 @@
 }
 
 body {
-    background-image: url(../images/bg-simplify-section-mobile.svg);
-    background-size: cover;
+    background: url(../images/bg-simplify-section-mobile.svg) no-repeat initial, url(../images/bg-tablet-pattern.svg) no-repeat top right;
+    background-size: auto, 100px 100px;
     text-align: center;
+    font-size: 16px;
 }
 
 nav {
@@ -42,21 +43,52 @@ ul {
     list-style-type: none;
 }
 
+p {
+    color: var(--dark-grayish-blue);
+}
+
+nav a:hover {
+    color: var(--dark-grayish-blue);
+}
+
 .nav-links,
 .close,
 nav .btn {
     display: none;
 }
 
-.title {
-    color: var(--very-dark-blue);
+.hamburger {
+    display: block;
 }
 
-button {
+.burger {
+    display: none;
+}
+
+.toggle{
+    display: block;
+    position: relative;
+    width: 80px;
+    height: 120px;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.title {
+    color: var(--dark-blue);
+}
+
+button,
+.number-div {
     background-color: var(--bright-red);
     color: var(--main-white);
     border-radius: 20px;
-    padding: 10px 20px;
+    padding: 10px 23px;
+}
+
+button:hover {
+    background-color: var(--very-pale-red);
+    color: var(--main-white);
 }
 
 button,
@@ -69,11 +101,48 @@ input {
     flex-direction: column;
 }
 
+.home-page .btn,
+.reviews .btn,
+.simplify .btn {
+    margin-top: 25px;
+}
+
 .about {
     flex-direction: column;
 }
 
 .about-content{
+}
+
+.about-content-head {
+    margin-bottom: 50px;
+}
+
+.about-content-head h2 {
+    margin-bottom: 20px;
+}
+
+.about-content-div {
+    margin-bottom: 40px;
+}
+
+.number-div-contain {
+    padding: 10px 10px 10px 63px;
+    margin-bottom: 20px;
+    font-size: 13px;
+    font-weight: bold;
+    background-color: var(--very-pale-red);
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+    width: 100%;
+    display: flex;
+    position: relative;
+}
+
+.number-div {
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .intro-image-div {
@@ -86,10 +155,73 @@ input {
 
 .reviews {}
 
+.review-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    grid-gap: 10px;
+}
+
+.review-div {
+    position: relative;
+    width: 300px;
+    height: 250px;
+    padding: 40px 10px;
+    background-color: var(--very-light-gray);
+    margin-bottom: 20px;
+    margin-top: 60px;
+    margin-left: 5px;
+}
+
+.review-div p {
+    margin-top: 60px;
+}
+
+.reviewer {
+    position: absolute;
+    top: -40px;
+    left: 35%;
+}
+
+.review-img {
+    width: 80px;
+    height: 80px;
+}
+
+.review-img img {
+    width: 100%;
+    height: 100%;
+}
+
+.radio-slide {
+    width: 8px;
+    height: 8px;
+    border-color: var(--bright-red);
+    color: var(--bright-red);
+}
+
 .simplify {
     background-color: var(--bright-red);
     color: var(--main-white);
     flex-direction: column;
+    padding: 40px 20px;
+    position: relative;
+}
+
+.simplify h2 {
+    font-size: 30px;
+    width: 270px;
+}
+
+.simplify img {
+    position: absolute;
+    opacity: 0.9;
+    top: 10px;
+    left: -260px;
+    width: 300px;
+    height: 300px;
 }
 
 .simplify button {
@@ -97,32 +229,74 @@ input {
     background-color: var(--main-white);
 }
 
+.simplify button:hover {
+    color: var(--very-pale-red);
+    background-color: var(--main-white);
+}
+
+.footer-form-label {
+    width: 100%;
+}
+
 footer {
     background-color: var(--very-dark-blue);
     color: var(--main-white);
+    flex-direction: column;
+}
+
+.footer {
+    flex-direction: column;
+}
+
+.footer-form {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    width: 100%;
 }
 
 footer a {
     color: var(--main-white);
+    padding: 15px;
+}
+
+.logo-flex {
+    flex-direction: column;
+}
+
+.social-icon-div {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+footer li {
+    line-height: 26px;
+}
+
+footer .logo {
+    fill: hsl(0, 0%, 98%);
 }
 
 input {
-    border-radius: 50px;
+    border-radius: 20px;
     background-color: var(--main-white);
-    padding: 10px 20px;
+    padding: 10px 17px;
+}
+
+.copyright {
+    margin-top: 10px;
 }
 
 @media only screen and (min-width: 1000px){
 
     body {
-        background-image: url(../images/bg-simplify-section-desktop.svg);
-        text-align: center;
+        background-image: url(../images/bg-simplify-section-desktop.svg) no-repeat, url(../images/bg-tablet-pattern.svg) repeat-y top right;
+        text-align: left;
     }
     
     nav,
     section,
     footer {    
-        padding: 10px 20px;
+        padding: 40px 130px;
     }
     
     .hamburger,
@@ -130,7 +304,8 @@ input {
         display: none;
     }
 
-    .nav-links {
+    .nav-links,
+    nav .btn {
         display: block;
     }
 
@@ -140,35 +315,100 @@ input {
 
     .nav-links a {
         color: var(--very-dark-blue);
+        padding-left: 10px;
     }
     
     .home-page {
         flex-direction: row-reverse;
     }
+
+    .home-page-note {
+        width: 70%;
+        padding-right: 150px;
+    }
+
+    .home-page-note h1 {
+        font-size: 45px;
+        margin-bottom: 30px;
+    }
+
+    .home-page-note p {
+        width: 300px;
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
     
     .about {
         flex-direction: row;
     }
+
+    .about-content-head {
+        padding-right: 200px;
+    }
+
+    .number-div-contain {
+        background-color: transparent;
+    }
+
+    .number-div-contain,
+    .number-div-p {
+        padding: 10px 10px 10px 85px;
+    }
     
     .intro-image-div {
         width: 100%;
+        height: 400px;
     }
     
     .intro-image {
         width: 100%;
+        height: 90%;
     }
     
-    .reviews {}
+    .reviews {
+        text-align: center;
+    }
     
     .simplify {
         flex-direction: row;
+        padding: 60px 130px;
+    }
+
+    .simplify .btn {
+        margin-top: 0;
     }
     
-    footer {
+    .footer {
+        flex-direction: row-reverse;
     }
     
     input {
         padding: 10px 20px;
+    }
+
+    .logo-flex {
+        flex-direction: column-reverse;
+    }
+
+    .simplify h2 {
+        font-size: 30px;
+        width: 320px;
+    }
+
+    .social-icon-div {
+        margin-bottom: 0px;
+    }
+
+    .copyright {
+        margin-top: -10px;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .footer-form {
+        margin-top: 0px;
+        margin-bottom: 25px;
+        width: 100%;
     }
 
 }
